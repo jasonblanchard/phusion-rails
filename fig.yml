@@ -1,0 +1,10 @@
+db:
+  image: postgres
+  ports:
+    - 5432
+web:
+  build: .
+  ports:
+    - 80:80
+  links:
+    - db
