@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  get 'statuses/health', :defaults => { :format => :json }
+  get 'health' => 'statuses#health', :defaults => { :format => :json }
+  get 'health/:status' => 'statuses#set_health', :defaults => { :format => :json }
 
   root 'posts#index'
   resources :posts

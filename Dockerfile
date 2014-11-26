@@ -11,6 +11,9 @@ RUN rm /etc/nginx/sites-available/default
 
 RUN echo "env PHUSIONDOCKER_DB_1_PORT_5432_TCP_ADDR;" >> /etc/nginx/main.d/default.conf
 RUN echo "env PHUSIONDOCKER_DB_1_PORT_5432_TCP_PORT;" >> /etc/nginx/main.d/default.conf
+RUN echo "env REDIS_PORT_6379_TCP_ADDR;" >> /etc/nginx/main.d/default.conf
+RUN echo "env REDIS_PORT_6379_TCP_PORT;" >> /etc/nginx/main.d/default.conf
+RUN echo "env LOCAL_PORT;" >> /etc/nginx/main.d/default.conf
 
 RUN rm -f /etc/service/nginx/down
 
