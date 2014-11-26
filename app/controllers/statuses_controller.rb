@@ -1,4 +1,5 @@
 class StatusesController < ApplicationController
+  http_basic_authenticate_with name: "super", password: "secret", except: :health
 
   before_action :setup_redis
 
